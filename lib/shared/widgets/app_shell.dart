@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../features/record/presentation/home_screen.dart';
+import '../../features/history/presentation/history_screen.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -11,8 +13,8 @@ class _AppShellState extends State<AppShell> {
   int _currentIndex = 0;
 
   final _pages = const [
-    _PlaceholderPage(label: '홈', icon: Icons.home_outlined),
-    _PlaceholderPage(label: '기록', icon: Icons.edit_note_outlined),
+    HomeScreen(),
+    HistoryScreen(),
     _PlaceholderPage(label: '통계', icon: Icons.bar_chart_outlined),
     _PlaceholderPage(label: '설정', icon: Icons.settings_outlined),
   ];
@@ -20,7 +22,7 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex],
+      body: IndexedStack(index: _currentIndex, children: _pages),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (i) => setState(() => _currentIndex = i),
