@@ -271,6 +271,21 @@ flutter test
 
 ---
 
+## Architecture Decision Records (ADR)
+
+주요 기술 결정과 그 근거를 기록합니다. → [전체 목록](.adr/0000-index.md)
+
+| 번호 | 제목 | 상태 |
+|------|------|------|
+| [ADR-0001](.adr/0001-flutter-cross-platform.md) | 크로스플랫폼 프레임워크로 Flutter 선택 | Accepted |
+| [ADR-0002](.adr/0002-local-sqlite-no-backend.md) | 서버 없이 SQLite 온디바이스 저장 | Accepted |
+| [ADR-0003](.adr/0003-claude-api-cloud-ai.md) | 온디바이스 ML 대신 Claude API 사용 | Accepted |
+| [ADR-0004](.adr/0004-riverpod-state-management.md) | 상태 관리로 Riverpod 선택 | Accepted |
+| [ADR-0005](.adr/0005-feature-first-structure.md) | Feature-first 폴더 구조 채택 | Accepted |
+| [ADR-0006](.adr/0006-on-demand-ai-suggestion.md) | AI 제안을 온디맨드(+ 버튼 탭 시)로 호출 | Accepted |
+
+---
+
 ## 개발 현황
 
 | 마일스톤 | 상태 | 완료일 |
